@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMarcasTable extends Migration
+class CreateTarefasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateMarcasTable extends Migration
      */
     public function up()
     {
-        Schema::create('marcas', function (Blueprint $table) {
+        Schema::create('tarefas', function (Blueprint $table) {
             $table->id();
+            $table->string('tarefa', 200);
+            $table->date('data_limite_conclusao');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateMarcasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('marcas');
+        Schema::dropIfExists('tarefas');
     }
 }

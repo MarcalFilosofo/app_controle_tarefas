@@ -1,7 +1,7 @@
 @component('mail::message')
-# Introduction
+# {{ $tarefa }}
 
-Data limite de conclusão {{ $data_limite_conclusao }}
+Data limite de conclusão: {{ $data_limite_conclusao }}
 
 @component('mail::button', ['url' => $url])
 Clique aqui para ver a tarefa

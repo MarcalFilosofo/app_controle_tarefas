@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tarefa extends Model
 {
     use HasFactory;
-    protected $fillable = ['tarefa', 'data_limite', 'user_id'];
+    protected $fillable = ['tarefa', 'data_limite_conclusao', 'user_id'];
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

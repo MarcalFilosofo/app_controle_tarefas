@@ -5,20 +5,21 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Falta pouco! Precisamos apenas verificar o e-mail</div>
+                <div class="card-header">Falta pouco agora! Precisamos apenas que você valide seu e-mail</div>
 
                 <div class="card-body">
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">
-                            Reenviamos o E-mail para você com o link de validatação.
+                            Reenviamos um e-mail para você com o link de validação.
                         </div>
                     @endif
 
-                    Antes de usar a aplicação, valide seu e-mail <br>
-                    Se você não recebeu um e-mail, clique no link abaixo para reenvia-lo
+                    Antes de utilizar os recursos da aplicação, por favor valide seu e-mail por meio do link de verificação que encaminhamos para seu e-mail.
+                    <br>
+                    Caso você não tenha recebido o e-mail de verificação, clique o link a seguir para receber um novo e-mail.
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">Clique aqui</button>.
                     </form>
                 </div>
             </div>
